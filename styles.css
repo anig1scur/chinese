@@ -1,86 +1,64 @@
-@import url(https://fonts.googleapis.com/earlyaccess/notosansscsliced.css);
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+SC:wght@400;700;900&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap');
 
-/* Noto Serif TC */
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-ExtraLight.woff2') format('woff2'); /* IE9 Compat Modes */
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Light.woff2') format('woff2'); /* IE9 Compat Modes */
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Medium.woff2') format('woff2'); /* IE9 Compat Modes */
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-SemiBold.woff2') format('woff2'); /* IE9 Compat Modes */
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Bold.woff2') format('woff2'); /* IE9 Compat Modes */
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Black.woff2') format('woff2'); /* IE9 Compat Modes */
-  font-weight: 800;
-  font-style: normal;
-}
-
-
-/* Seto Font */
 @font-face {
   font-family: 'Seto Font';
-  src: url('fonts/seto/Seto-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
+  src: url('fonts/seto/Seto-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-/* GenJyuuGothic */
 @font-face {
   font-family: 'GenJyuuGothic';
-  src: url('fonts/genjyuugothic/GenJyuuGothic-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
+  src: url('fonts/genjyuugothic/GenJyuuGothic-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Hana Min';
-  src: url('fonts/hanamin/HanaMin-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
+  src: url('fonts/hanamin/HanaMin-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+} */
+
+body[lang="tc"] .font-notosans,
+body[lang="tc"] #section-notosans {
+  font-weight: 500;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+body[lang="sc"] .font-notosans,
+body[lang="sc"] #section-notosans {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 500;
 }
 
-.font-notoserif {
-  font-family: 'Noto Serif TC';
+body[lang="tc"] .font-notoserif,
+body[lang="tc"] #section-notoserif {
+  font-family: 'Noto Serif TC', serif;
   font-weight: 700;
 }
-body[lang=sc] .font-notosans {
-  font-family: 'Noto Sans SC Sliced', sans-serif;
-  font-weight: 500;
+body[lang="sc"] .font-notoserif,
+body[lang="sc"] #section-notoserif {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+
 }
-body[lang="tc"] .font-notosans {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 500;
+
+.font-setofont, #section-setofont {
+  font-family: 'Seto Font', sans-serif;
 }
+
+.font-genjyuugothic, #section-genjyuugothic {
+  font-family: 'GenJyuuGothic', sans-serif;
+}
+
+.font-hanamin, #section-hanamin {
+  font-family: 'Hana Min', serif;
+}
+
 .font-setofont {
   font-family: 'Seto Font', sans-serif;
 }
@@ -829,8 +807,10 @@ a:hover {
 body {
   font-size: 15px;
   line-height: 26px;
-  font-family: 'Noto Serif TC', sans-serif;
+  font-family: 'Noto Serif TC', 'Noto Serif SC', serif;
   color: #222;
+  padding: 0;
+  margin: 0;
 }
 
 pre {
